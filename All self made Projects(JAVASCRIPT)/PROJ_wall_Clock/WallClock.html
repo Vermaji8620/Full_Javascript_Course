@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wall clock</title>
+    <style>
+        #conta{
+            width: 6rem;
+            height: 1.5rem;
+            border: 2px solid red;
+            box-shadow: 1px 1px 13px 10px black;
+            padding: 3px 8px;
+            /* margin: 1px 1px; */
+            }
+        #contaa{
+            width: 6rem;
+            height: 1.5rem;
+            border: 2px solid red;
+            box-shadow: 1px 1px 13px 10px black;
+            padding: 13px 18px;
+            /* margin: 1px 1px; */
+            }
+    </style>
+</head>
+<div id="conta"></div>
+<div id="contaa"></div>
+
+<body>
+
+    <script>
+        console.log("this")
+
+        setInterval(() => {
+            document.getElementById('conta').innerHTML = new Date().toLocaleTimeString()
+            document.getElementById('contaa').innerHTML = new Date().toLocaleDateString()
+        }, 1000);
+        
+
+    </script>
+</body>
+
+</html>

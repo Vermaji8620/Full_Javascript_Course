@@ -1,0 +1,41 @@
+
+<!-- DOUBT TO BE DEALT LATER -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alarm clock</title>
+
+</head>
+
+<body>
+    <script>
+        var hours = prompt("Enter hours in railway system:");
+        var minutes = prompt("Enter minutes:");
+        if (hours <= 23 & hours >= 0 & minutes >= 0 & minutes <= 59) {
+            alarm = () => {
+                let datetime = new Date()
+                let ghours = datetime.getHours()
+                let gminutes = datetime.getMinutes()
+                setTimeout((hours, ghours, minutes, gminutes) => {
+                    if (hours == ghours & minutes == gminutes) {
+                        console.log("yess")
+                    }
+                }, (minutes - gminutes) * 60 * 1000);
+            }
+            console.log("you alarm is set now")
+            alarm()
+            console.log("your alarm will ring")
+        }
+        else {
+            console.log("plz enter correct time")
+        }
+
+    </script>
+</body>
+
+</html>
